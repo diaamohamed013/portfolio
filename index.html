@@ -28,7 +28,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-uppercase">
                     <li class="nav-item active pe-3">
-                        <a class="nav-link" aria-current="page" href="#">Home</a>
+                        <a class="nav-link" aria-current="page" href="#home">Home</a>
                     </li>
                     <li class="nav-item pe-3">
                         <a class="nav-link" href="#about">About</a>
@@ -51,19 +51,17 @@
 
     <!-- start section home -->
 
-    <header>
+    <section>
         <div class="home" id="home">
+            <div id="particles-js"></div>
             <div class="container">
                 <div class="row ">
                     <div class="col-lg-9 m-auto">
                         <div class="home-content d-flex align-items-center justify-content-center text-center">
                             <div>
                                 <h1>
-                                    I am Diaa Mohamed
+                                    <span class="type"></span>
                                 </h1>
-                                <p>
-                                    Front End Developer
-                                </p>
                                 <div class="cvBtn mt-5">
                                     <a href="diaaCV.pdf" class="btn btn-dark shadow-lg rounded-pill" download>
                                         <i class="fa-solid fa-download me-2"></i>
@@ -76,7 +74,7 @@
                 </div>
             </div>
         </div>
-    </header>
+    </section>
 
     <!-- end section home -->
 
@@ -89,7 +87,7 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="content-img">
-                                    <img src="images/testimonial-2.jpg" class="rounded w-100 d-block" alt="">
+                                    <img src="images/mine.jpg" class="rounded w-100 d-block" alt="">
                                 </div>
                             </div>
                             <div class="col-md-8">
@@ -271,7 +269,7 @@
                             <div class="col-md-4">
                                 <div class="card-icon py-3 h-100 d-flex justify-content-center align-items-center">
                                     <a href="https://diaamohamed013.github.io/weatherApp/" target="_blank"
-                                        class="btn btn-dark">See Site</a>
+                                        class="btn btn-dark">View Site</a>
                                 </div>
                             </div>
                         </div>
@@ -295,7 +293,7 @@
                             <div class="col-md-4">
                                 <div class="card-icon py-3 h-100 d-flex justify-content-center align-items-center">
                                     <a href="https://diaamohamed013.github.io/products/" target="_blank"
-                                        class="btn btn-dark">See Site</a>
+                                        class="btn btn-dark">View Site</a>
                                 </div>
                             </div>
                         </div>
@@ -319,7 +317,7 @@
                             <div class="col-md-4">
                                 <div class="card-icon py-3 h-100 d-flex justify-content-center align-items-center">
                                     <a href="https://diaamohamed013.github.io/project1_web/" target="_blank"
-                                        class="btn btn-dark">See Site</a>
+                                        class="btn btn-dark">View Site</a>
                                 </div>
                             </div>
                         </div>
@@ -343,7 +341,7 @@
                             <div class="col-md-4">
                                 <div class="card-icon py-3 h-100 d-flex justify-content-center align-items-center">
                                     <a href="https://diaamohamed013.github.io/bookMarker/" target="_blank"
-                                        class="btn btn-dark">See Site</a>
+                                        class="btn btn-dark">View Site</a>
                                 </div>
                             </div>
                         </div>
@@ -367,7 +365,7 @@
                             <div class="col-md-4">
                                 <div class="card-icon py-3 h-100 d-flex justify-content-center align-items-center">
                                     <a href="https://diaamohamed013.github.io/dentist-website-update2/" target="_blank"
-                                        class="btn btn-dark">See Site</a>
+                                        class="btn btn-dark">View Site</a>
                                 </div>
                             </div>
                         </div>
@@ -391,7 +389,7 @@
                             <div class="col-md-4">
                                 <div class="card-icon py-3 h-100 d-flex justify-content-center align-items-center">
                                     <a href="https://diaamohamed013.github.io/signUp_logIn/" target="_blank"
-                                        class="btn btn-dark">See Site</a>
+                                        class="btn btn-dark">View Site</a>
                                 </div>
                             </div>
                         </div>
@@ -464,11 +462,20 @@
                         </h2>
                         <form action="">
                             <input type="text" name="name" class="form-control rounded-0 mb-3" placeholder="Your Name"
-                                id="">
+                                id="nameInp">
+                            <p class="my-2 alert p-2 hide validate1">
+                                Your name is invalid
+                            </p>
                             <input type="email" name="email" class="form-control rounded-0 mb-3"
-                                placeholder="Your Email" id="">
+                                placeholder="Your Email" id="mailInp">
+                            <p class="my-2 alert p-2 hide validate2">
+                                Your mail is invalid
+                            </p>
                             <input type="text" name="subject" class="form-control rounded-0 mb-3" placeholder="Subject"
-                                id="">
+                                id="subInp">
+                            <p class="my-2 alert p-2 hide validate3">
+                                Type a subject with or without spaces (no special chars)
+                            </p>
                             <textarea name="message" id="" class="form-control mb-5" placeholder="Message"></textarea>
                             <div class="form-btn text-center">
                                 <button class="btn rounded-pill">
@@ -528,7 +535,7 @@
     <footer>
         <div class="container text-center">
             <div class="mb-2">
-                © Copyright DevFolio. All Rights Reserved
+                © Copyright. All Rights Reserved
             </div>
 
         </div>
@@ -538,6 +545,17 @@
 
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/particles.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/typed.min.js"></script>
+    <script>
+        var typed = new Typed('.type', {
+            strings: ['I am Diaa Mohamed', 'Front End Developer', 'and UI/UX Developer'],
+            typeSpeed: 45,
+            backSpeed: 45,
+            loop: true
+        });
+    </script>
     <script src="js/main.js"></script>
 </body>
 
